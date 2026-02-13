@@ -1,0 +1,156 @@
+/* ESTRUCTURA GENERAL */
+.programas-container {
+  padding-top: 100px; /* Espacio navbar */
+  padding-bottom: 80px;
+  background-color: #f4f4f4; /* Gris muy suave para resaltar los banners */
+  min-height: 100vh;
+}
+
+/* ENCABEZADO (Mismo estilo que Quiénes Somos para consistencia) */
+.page-header {
+  background-color: var(--color-primary-red, #980204);
+  color: white;
+  padding: 50px 20px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-top: 10px;
+}
+
+/* LISTA DE BANNERS */
+.banners-list {
+  max-width: 900px; /* Ancho controlado para que no se estiren demasiado */
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column; /* UNO ARRIBA DE OTRO */
+  gap: 40px; /* Espacio generoso entre cada GIF */
+}
+
+/* ESTILO DEL TÍTULO DEL PROGRAMA */
+.program-title {
+  font-size: 1.5rem;          /* Tamaño grande pero prudente */
+  color: var(--color-dark-green, #0A2D33); /* Verde Institucional */
+  font-weight: 800;           /* Letra bien gordita (Bold) */
+  text-align: center;         /* Centrado */
+  text-transform: uppercase;  /* Todo en mayúsculas se ve más formal */
+  margin-top: 10px;
+  margin-bottom: 20px;        /* Espacio antes de la imagen */
+  letter-spacing: 1px;        /* Un poquito de aire entre letras */
+  
+  /* DETALLE DECORATIVO (Línea naranja abajo) */
+  position: relative;
+  padding-bottom: 10px;
+}
+
+/* La línea naranja debajo del título */
+.program-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%); /* Para centrar la línea perfectamente */
+  width: 60px;                 /* Largo de la línea */
+  height: 4px;                 /* Grosor de la línea */
+  background-color: var(--color-accent-orange, #EA8914);
+  border-radius: 2px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .program-title {
+    font-size: 1.2rem; /* Un poco más chico en celular */
+  }
+}
+
+/* TARJETA CONTENEDORA DEL GIF */
+.banner-item {
+  background: white;
+  border-radius: 20px; /* Bordes redondeados modernos */
+  padding: 10px;       /* Marco blanco alrededor del GIF */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Sombra suave */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.banner-item:hover {
+  transform: translateY(-5px); /* Se levanta un poco al pasar mouse */
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* EL GIF */
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #eee; /* Fondo mientras carga */
+}
+
+.program-gif {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover; /* Asegura que llene el espacio */
+}
+
+/* TEXTO "PRÓXIMAMENTE" */
+.coming-soon {
+  text-align: center;
+  color: #999;
+  margin-top: 30px;
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .page-header h1 {
+    font-size: 2rem;
+  }
+  
+  .banners-list {
+    gap: 25px; /* Menos espacio en celular */
+  }
+}
+
+/* 1. Definimos el movimiento (De abajo hacia arriba y transparente a visible) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px); /* Empieza 30px más abajo */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);    /* Termina en su lugar */
+  }
+}
+
+/* 2. Definimos la línea que crece (De ancho 0 a ancho 60px) */
+@keyframes growLine {
+  from { width: 0; }
+  to { width: 60px; }
+}
+
+/* APLICAMOS LA ANIMACIÓN AL TÍTULO PRINCIPAL (El de fondo rojo) */
+.page-header h1 {
+  /* Nombre - Duración - Suavizado - Relleno */
+  animation: fadeInUp 1.2s ease-out forwards;
+  opacity: 0; /* Empieza oculto para que no parpadee */
+}
+
+/* APLICAMOS AL SUBTÍTULO (Con un pequeño retraso) */
+.subtitle {
+  animation: fadeInUp 1.2s ease-out 0.7s forwards; /* 0.3s de retraso */
+  opacity: 0; /* Empieza oculto */
+}

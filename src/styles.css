@@ -1,0 +1,23 @@
+:root {
+  /* Paleta Oficial Fundación Hidalguense */
+  --color-primary-red: #980204;       /* Rojo institucional */
+  --color-accent-orange: #EA8914;     /* Naranja vibrante */
+  --color-accent-yellow: #FEC601;     /* Amarillo */
+  --color-dark-green: #0A2D33;        /* Textos oscuros / Fondos serios */
+  --color-teal: #118B8C;              /* Detalles turquesa */
+  --color-light-blue: #43ADDF;        /* Detalles azul claro */
+  --color-royal-blue: #385B87;        /* Azul institucional secundario */
+  --color-white: #FFFFFF;
+  
+  /* Configuraciones Globales */
+  --font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --navbar-height: 80px;
+}
+
+/* Aplicamos estilo base para que todo se vea profesional */
+body {
+  font-family: var(--font-main);
+  color: var(--color-dark-green);
+  margin: 0;
+  padding-top: var(--navbar-height); /* Para que el menú fijo no tape contenido */
+}

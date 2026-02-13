@@ -1,0 +1,67 @@
+<nav class="navbar-container">
+  
+  <div class="logo-section">
+    <a routerLink="/inicio" (click)="closeMenu()" style="text-decoration: none; display: flex; align-items: center; cursor: pointer;">
+      <img src="assets/images/Logo_M.png" alt="Logo FH" class="logo-img">
+      <div class="brand-text">
+        <h1>Fundación Hidalguense A.C.</h1>
+        <small>Acciones por ti</small>
+      </div>
+    </a>
+  </div>
+
+  <button class="menu-toggle" 
+          (click)="toggleMenu()" 
+          aria-controls="primary-navigation" 
+          [attr.aria-expanded]="isMenuOpen"
+          aria-label="Alternar navegación principal">
+    
+    <span class="bar" [class.open]="isMenuOpen"></span>
+    <span class="bar" [class.open]="isMenuOpen"></span>
+    <span class="bar" [class.open]="isMenuOpen"></span>
+  </button>
+
+  <ul id="primary-navigation" class="nav-links" [class.active]="isMenuOpen">
+    
+    <li>
+      <a routerLink="/inicio" routerLinkActive="active-link" (click)="closeMenu()" class="nav-item">
+        <h5>Inicio</h5>
+      </a>
+    </li>
+    
+    <li>
+      <a routerLink="/quienes-somos" routerLinkActive="active-link" (click)="closeMenu()" class="nav-item">
+        <h5>¿Quiénes somos?</h5>
+      </a>
+    </li>
+    
+    <li>
+      <a routerLink="/programas" routerLinkActive="active-link" (click)="closeMenu()" class="nav-item">
+        <h5>Programas</h5>
+      </a>
+    </li>
+    
+    <li>
+      <a routerLink="/galeria" routerLinkActive="active-link" (click)="closeMenu()" class="nav-item">
+        <h5>Galería</h5>
+      </a>
+    </li>
+    
+    <li class="mobile-spacing">
+      <a class="btn-agenda" 
+         (click)="accionCita()" 
+         style="cursor: pointer;">
+         Agendar Cita
+      </a>
+    </li>
+    
+    <li class="mobile-spacing">
+      <a class="btn-agenda" 
+         (click)="accionDonar()" 
+         style="cursor: pointer;">
+         Realizar Donación
+      </a>
+    </li>
+
+  </ul>
+</nav>

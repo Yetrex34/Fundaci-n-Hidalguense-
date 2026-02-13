@@ -1,0 +1,82 @@
+<div class="home-container">
+
+  <section class="hero-section">
+    <div class="orange-box"></div>
+
+    <div class="image-wrapper">
+      <img src="assets/images/Foto_Principal_v2.jpg" alt="Fundación" class="hero-image">
+    </div>
+
+    <div class="social-bar">
+      <p class="social-text">¡Síguenos en nuestras redes sociales!</p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/fundacion.hidalguenseac.5" target="_blank"><img src="assets/images/icon_face.svg" alt="Facebook"></a>
+        <a href="https://twitter.com/FHidalguense_ac" target="_blank"><img src="assets/images/icon_tw.svg" alt="X"></a>
+        <a href="https://www.instagram.com/fundacion_hidalguense_ac" target="_blank"><img src="assets/images/icon_insta.svg" alt="Instagram"></a>
+        <a href="https://www.youtube.com/@FundacionHidalguense" target="_blank"><img src="assets/images/icon_yt.svg" alt="YouTube"></a>
+
+        
+      </div>
+    </div>
+  </section>
+
+  <div class="content-grid">
+
+    <section class="left-column">
+      
+      <div class="news-container">
+        <h3 class="section-title">Noticias y Talleres</h3>
+       <div class="carousel-container">
+          
+          <button class="nav-btn prev" (click)="prevSlide()">&#10094;</button>
+
+          <div class="carousel-track-container">
+            <ul class="carousel-track" [style.transform]="transformStyle">
+              
+              <li class="carousel-card" *ngFor="let item of newsList" [style.flex]="'0 0 ' + (100 / itemsPerSlide) + '%'">
+                <a [href]="item.link" target="_blank" class="card-link">
+                  <div class="card-image">
+                    <img [src]="item.image" [alt]="item.title" onerror="this.src='assets/images/logo.png'">
+                    <span class="card-date">{{ item.date }}</span>
+                  </div>
+                  <div class="card-content">
+                    <h4>{{ item.title }}</h4>
+                    <p>{{ item.description }}</p>
+                    <span class="read-more">Ver más &rarr;</span>
+                  </div>
+                </a>
+              </li>
+
+            </ul>
+          </div>
+
+          <button class="nav-btn next" (click)="nextSlide()">&#10095;</button>
+
+        </div>
+      </div>
+
+      <div class="extra-banner-container">
+        <img src="assets/images/FisioInfo.jpg" alt="Aviso Importante" class="banner-img">
+      </div>
+
+    </section>
+
+    <aside class="right-column">
+      <div class="fb-widget-wrapper">
+        <h3 class="section-title">Redes Sociales</h3>
+        <iframe 
+          src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffundacion.hidalguenseac.5&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
+          width="100%" 
+          height="500" 
+          style="border:none;overflow:hidden" 
+          scrolling="no" 
+          frameborder="0" 
+          allowfullscreen="true" 
+          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+        </iframe>
+      </div>
+    </aside>
+
+  </div>
+  
+</div>

@@ -1,0 +1,66 @@
+<div class="galeria-container">
+
+  <header class="page-header">
+    <h1>Galería de Momentos</h1>
+    <p>Un vistazo a las actividades que transforman vidas.</p>
+  </header>
+
+  <div class="gallery-grid">
+    <div class="gallery-item" 
+         *ngFor="let item of fotosVisibles" 
+         (click)="openModal(item)"
+         (keydown.enter)="openModal(item)"
+         tabindex="0"
+         role="button"
+         [attr.aria-label]="'Ver detalles de ' + item.title">
+      
+      <div class="image-wrapper">
+        <img [src]="item.image" [alt]="item.title" loading="lazy">
+        <div class="hover-info">
+          <span>Ver más</span>
+        </div>
+      </div>
+      
+      <h3 class="mini-title">{{ item.title }}</h3>
+    </div>
+  </div>
+
+  <div class="pagination-controls" *ngIf="totalPaginas > 1">
+    
+    <button (click)="cambiarPagina(paginaActual - 1)" 
+            [disabled]="paginaActual === 1"
+            class="page-btn prev-next">
+      Anterior
+    </button>
+
+    <button *ngFor="let p of paginasArray" 
+            (click)="cambiarPagina(p)"
+            class="page-btn number"
+            [class.active]="p === paginaActual">
+      {{ p }}
+    </button>
+
+    <button (click)="cambiarPagina(paginaActual + 1)" 
+            [disabled]="paginaActual === totalPaginas"
+            class="page-btn prev-next">
+      Siguiente
+    </button>
+
+  </div>
+
+  <div class="modal-overlay" *ngIf="selectedItem" (click)="closeModal()" (keydown)="trapFocus($event)">
+    <div class="modal-content" (click)="$event.stopPropagation()" role="dialog" aria-modal="true">
+      <button #closeBtn class="close-btn" (click)="closeModal()" aria-label="Cerrar ventana"><span class="material-icons">X</span></button>
+      <div class="modal-layout">
+        <div class="modal-img-container"><img [src]="selectedItem.image" class="modal-img" [alt]="selectedItem.title"></div>
+        <div class="modal-info">
+          <h2>{{ selectedItem.title }}</h2>
+          <div class="divider"></div>
+          <p>{{ selectedItem.description }}</p>
+          <button #actionBtn class="action-btn" (click)="navegarAlLink()">Solicitar informes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

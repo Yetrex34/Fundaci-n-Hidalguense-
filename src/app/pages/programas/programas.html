@@ -1,0 +1,27 @@
+<div class="programas-container">
+
+  <header class="page-header">
+    <div class="header-content">
+      <h1>Nuestros Programas</h1>
+      <p class="subtitle">Iniciativas diseñadas para el bienestar de nuestra comunidad.</p>
+    </div>
+  </header>
+
+  <section class="banners-list">
+    
+    <div class="banner-item" *ngFor="let item of programas">
+      <div class="image-wrapper">
+        <h2 class="program-title">{{ item.Title }}</h2>
+        <img [src]="item.img" [alt]="item.alt" class="program-gif">
+        
+        <div class="hover-overlay"></div>
+      </div>
+    </div>
+
+    <div class="coming-soon">
+      <p>... Próximamente más programas ...</p>
+    </div>
+
+  </section>
+
+</div>
