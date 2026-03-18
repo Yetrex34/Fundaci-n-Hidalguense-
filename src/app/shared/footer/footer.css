@@ -1,7 +1,7 @@
 /* Contenedor General (Fondo Salmón) */
 .footer-container {
-  background-color: #EFA48D; /* Tu color Salmón */
-  color: #0A2D33; /* Texto Verde Oscuro Institucional */
+  background-color: #980204; /* Tu color Salmón */
+  color: #ffffff; /* Texto Verde Oscuro Institucional */
   padding: 30px 5px 10px 10px;
   font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
@@ -59,7 +59,7 @@
   width: 35px;
   height: 35px;
   transition: transform 0.2s;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
 .social-icon img:hover {
@@ -114,7 +114,7 @@
 .social-text {
   margin: 0;
   font-weight: 800;
-  color: var(--color-dark-green, #0A2D33);
+  color: var(--color-white, #ffffff);
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 1px;
