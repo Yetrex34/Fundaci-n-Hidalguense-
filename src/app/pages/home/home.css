@@ -384,3 +384,38 @@
 
 .prev { left: 10px; }
 .next { right: 10px; }
+
+/* =========================================
+   NUEVA SECCIÓN DE REELS
+   ========================================= */
+.reels-section {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.reels-container {
+  display: flex;
+  justify-content: flex-start; /* Alineado a la izquierda como las noticias */
+  padding: 10px 0;
+}
+
+.reel-card {
+  background: white;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+  border: 1px solid #eee;
+}
+
+.reel-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-accent-orange, #EA8914);
+}
+
+/* Ajuste responsivo para que el video no se corte en celulares */
+@media (max-width: 600px) {
+  .reels-container {
+    justify-content: center;
+  }
+}
