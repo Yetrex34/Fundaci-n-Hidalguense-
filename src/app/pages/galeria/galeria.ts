@@ -24,6 +24,56 @@ export class Galeria {
   // TU LISTA DE FOTOS (Aquí pon todas las que quieras)
   fotos= [
     {
+      title: '¡Taller de Cultivo de setas!',
+      description: 'Terminamos nuestro taller de Cultivo de Setas con éxito este 2 de Marzo. Pasamos de la teoría a la práctica, aprendiendo desde la preparación del sustrato hasta las condiciones de humedad y luz  para que los hongos necesitan para brotar.',
+      image: 'assets/images/fundacion/Marzo_026/02_03_26.jpg',
+      link: 'https://www.facebook.com/fundacion.hidalguenseac.5/posts/pfbid02537wK6Pp14zkWVAg1dkyHAKr97QdNCq7wn1mji9KHbppkaN1pYCnMmvrJfvkPRLsl'
+    },{
+      title: '¡Clase de Muffins de Plátano con coco!',
+      description: 'Nuestra cocina se llenó de un aroma irresistible con la clase de Muffins de Plátano con coco. En postres y platillos deliciosos, nos encanta demostrar que cocinar en casa puede ser fácil y divertido. ¡Gracias a todos los que se animaron a venir!',
+      image: 'assets/images/fundacion/Marzo_026/03_03_26.jpg',
+      link: 'https://www.facebook.com/fundacion.hidalguenseac.5/posts/pfbid02Jf9SXC9Tq4d7nHpujTc5nvdGnzmsMQVU2jwEvai5PkPkGV52SGQXiy7CmbU9XqZsl'
+    },{
+      title: '¡Clase de Tablas de queso!',
+      description: 'El pasado 5 de Marzo, nos sumergimos en un mundo de texturas y contraste. Este taller de tablas de queso fue mucho más que aprender a acomodar ingredientes y fue descubrir cómo crear una experiencia. Desde la elección de los quesos hasta el salami, cada alumno demostró que la comida también es una forma de arte.',
+      image: 'assets/images/fundacion/Marzo_026/05_03_26.jpg',
+      link: 'https://www.facebook.com/share/p/1CehtVLNpS/'
+    },{
+      title: '¡Feria de la Mujer en la Fundación Hidalguense!',
+      description: 'El pasado 7 de Marzo vivimos un evento memorable para las mujeres de nuestra comunidad. Las asistentes disfrutaron de pláticas sobre el bienestar, alimentación y arte, además de reflexionar sobre el significado del 8M. ¡Gracias por acompañarnos!',
+      image: 'assets/images/fundacion/Marzo_026/07_03_26.jpg',
+      link: 'https://www.facebook.com/share/p/16DoXEJTRe/'
+    },{
+      title: '¡Taller de Pasta Flexible!',
+      description: 'Este 11 de marzo fue fin de curso del taller de pasta flexible, y no podemos estar más orgullosos. Entre texturas, colores y mucha creatividad.¡Logramos piezas increíbles! Felicidades a todos los alumnos.',
+      image: 'assets/images/fundacion/Marzo_026/11_03_26.jpg',
+      link: 'https://www.facebook.com/share/p/1K96XMtiK2/'
+    },{
+      title: '¡Celebración del día internacional del Tai Chi',
+      description: 'El pasado 20 de Marzo, nos unimos a la ola global de salud y bienestar con motivo del Día Internacional del Tai Chi. Fue un evento mágico donde cada respiración y cada movimiento nos recordó la importancia de conectar con nuestro centro. ¡Gracias a todos los que se sumaron!',
+      image: 'assets/images/fundacion/Marzo_026/20_03_26.jpg',
+      link: 'https://www.facebook.com/share/p/1UCxDaSiPD/'
+    },{
+      title: '¡Taller de Flores Eternas!',
+      description: 'Este 11 de Febrero se vivió a cabo el taller de Flores Eternas aprendimos de técnica para crear una flor en donde no solo estamos haciendo un adorno, sino creando un símbolo de afecto que no conoce el paso del tiempo. Un agradecimiento especial a nuestras alumnas por su dedicación',
+      image: 'assets/images/fundacion/Febrero_026/11_02_26.jpg',
+      link: 'https://www.facebook.com/fundacion.hidalguenseac.5/posts/pfbid0uafesJ7djJi7Mk1RmawbmfCms1PT3z2idYEFJteYcZ5uaLJRDibhamQ7PnJiHrPXl'
+    },{
+      title: '¡Taller de Bordado de Tenango!',
+      description: 'Este 20 de Febrero, nuestras manos se llenaron de hilos, colores y tradición. En nuestro taller de bordado de tenango, no solo aprendimos puntadas sino que conectamos con el corazón de nuestras raíces y disfrutamos del proceso. ¡Gracias a todos los que vinieron!',
+      image: 'assets/images/fundacion/Febrero_026/20_02_26.jpg',
+      link: 'https://www.facebook.com/share/p/1Ceb3yM2aE/'
+    },{
+      title: '¡Celebración de Año Nuevo Chino - Caballo de fuego 2026!',
+      description: 'Celebramos la llegada del Año Nuevo Chino con un festival lleno de tradición, energía y el color de nuestra comunidad. Desde el místico bautizo del león hasta la fuerza de las artes marciales y el ritmo del Kpop. ¡Gracias a cada asistente por sumar su energía a esta gran celebración cultural!',
+      image: 'assets/images/fundacion/Febrero_026/15_02_26.jpg',
+      link: 'https://www.facebook.com/share/p/1WxZyzkBYU/'
+    },{
+      title: '¡Campaña de Lentes!',
+      description: 'El pasado 16 de Febrero, fue un honor servir a nuestra comunidad y aportar un granito de arena para su salud y bienestar. En la Fundación Hidalguense estamos convencidos que ver bien es un derecho de todos. ¡Gracias a todos los que asistieron!',
+      image: 'assets/images/fundacion/Febrero_026/16_02_26.jpg',
+      link: 'https://www.facebook.com/share/p/1BBvD2gjqM/'
+    },{
       title: '¡TALLER DE MANUALIDADES EN FIELTRO!',
       description: 'Así vivimos nuestro reciente Taller de Manualidades en Fieltro. Fue una jornada increíble donde la creatividad no tuvo límites. No solo aprendimos técnicas de corte y costura, ¡creamos piezas únicas con alma!',
       image: 'assets/images/fundacion/FP_06_02_26_1.jpeg',
